@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RideMate - Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Home screen / Login screen -->
+    <header>
+      <h1>Welcome to RideMate</h1>
+    </header>
+    <main>
+      <div class="login-container">
+        <button class="login-btn">Login</button>
+        <button class="signup-btn">Sign Up</button>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Ride</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="back-btn">&lt;</button>
+      <h1>Find a ride</h1>
+    </header>
+    <main>
+      <label for="from">Where are you going?</label>
+      <input type="text" id="from" placeholder="From (Enter your home location)" />
+      <input type="text" id="to" placeholder="To (Enter college/university name)" />
+
+      <label for="date">When?</label>
+      <input type="datetime-local" id="date" value="2025-02-08T17:30" />
+
+      <label>Seat needed?</label>
+      <div class="seat-selector">
+        <button id="decrease">-</button>
+        <span id="seat-count">1</span>
+        <button id="increase">+</button>
+      </div>
+
+      <button class="search-btn">Search</button>
+    </main>
+    <footer>
+      <nav>
+        <a href="#">Your rides</a>
+        <a href="#" class="active">Search</a>
+        <a href="#">Publish</a>
+        <a href="#">Inbox</a>
+        <a href="#">Profile</a>
+      </nav>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Ride</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="back-btn">&lt;</button>
+      <h1>Find a ride</h1>
+    </header>
+    <main>
+      <label for="from">Where are you going?</label>
+      <input type="text" id="from" placeholder="From (Enter your home location)" />
+      <input type="text" id="to" placeholder="To (Enter college/university name)" />
+
+      <label for="date">When?</label>
+      <input type="datetime-local" id="date" value="2025-02-08T17:30" />
+
+      <label>Seat needed?</label>
+      <div class="seat-selector">
+        <button id="decrease">-</button>
+        <span id="seat-count">1</span>
+        <button id="increase">+</button>
+      </div>
+
+      <button class="search-btn" onclick="findShortestPath()">Search</button>
+
+      <!-- Container for displaying the Google Map -->
+      <div id="map" style="height: 400px; width: 100%;"></div>
+    </main>
+    <footer>
+      <nav>
+        <a href="#">Your rides</a>
+        <a href="#" class="active">Search</a>
+        <a href="#">Publish</a>
+        <a href="#">Inbox</a>
+        <a href="#">Profile</a>
+      </nav>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
